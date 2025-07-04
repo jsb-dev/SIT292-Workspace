@@ -1,0 +1,159 @@
+Linear Equations 
+
+An equation where each term is expressed as either a constant or a variable multiplied by a constant.
+variables - the unknown values to solve for
+coefficients - the multiplying factor for each variable (assumed 1 if only variable and no constant)
+constant term - typically the RHS, this is the constant value which describes what the LHS equates to
+
+The relationship described by a linear equation can be represented as a straight line in a 2D cartesian plane, 
+where the change of value for one variable is directly proportional to said change in other variables.
+NOTE: Linearity is inferred by the use of powers of 1 for each variable, so this
+excludes the use of square values, square root values, etc.
+
+
+System of Linear equations
+
+This shows how two or more linear equations with the same variables describe a linear system.
+This allows us to solve problems with multiple dictating factors that have unknown values, related to
+each other linearly.
+
+The solution involves finding the values for each variable which satisfy all equations at the same time.
+This leads to one of three results:
+i. Exactly one solution, one intersecting point on a 2D graph
+ii. No solution, inconsistent equations indicating the lines would all be parallel, not intersecting
+iii. Infinitely many solutions, where each line is coincident (positioned the same on a 2D plane), meaning the equations
+are all dependant on each other.
+
+
+Solutions
+
+A value or a set which, when substituted for the variables in the original equation, reads true. The number(s) should each
+fit in the equation such that the LHS component equals the constant term on the RHS. If the equation is not true, meaning that
+the equation presents an unequal LHS and RHS, then there is no solution. A solution to a system of linear equations infers that
+this must be true for all equations simeltaneously, where one result should satisfy every linear relationship in the system.
+
+
+Augmented Matrix
+
+A mathematical mechanism to represent a system of linear equations as a 2D collection of numbers. The 2D collection depicts all 
+coefficients (columns) for each equation (rows), followed by their constant term (final column of each row). The resulting matrix
+depicts each equation in a cols*rows grid, its augmented form. This opens up a lot of possibilities for performing operations on
+the whole system, providing a compact way for solving systems conveniently via row operation rules.
+
+Elementary Row operations
+
+These are rules outlining what can be done on a matrix to solve its system:
+i. Swap two rows (useful for Gaussian elimination and RREF)
+ii. Multiply a row's elements by x where x != 0
+iii. Multiply a row's elements by a multiple of another row's corresponding elements
+
+
+Row-Echelon Form (Reduced)
+This aims to simplify a matrix that's in REF (not reduced). REF depicts a system in a matrix with an upper-right
+triangle of values, with the lower-left consisting only of 0s, and leading 1's as the pivot (first value) for each row:
+
+e.g. Matrix in REF
+[ 1 2 3 | 5 ]
+[ 0 1 4 | 7 ]
+[ 0 0 1 | 9 ]
+
+RREF takes this one step further by satisfying one more condition: Each leading 1 is the only non-zero entry in its row.
+
+e.g. Matrix in RREF
+[ 1 0 0 | 2 ]
+[ 0 1 0 | 3 ]
+[ 0 0 1 | 4 ]
+
+RREF presents an easy-to-read format for interpreting the resulting solutions for each variable. Since each 1 corresponds to a 
+specific variable (x, y, z for e.g. in the above), and the constant term is defined for each in its corresponding final column. 
+A row containing no leading 1 is a free variable, meaning that it can take on any value, and the other variables in the system 
+are expressed in terms of the free variable.
+
+
+Gaussian Algorithm
+
+This is used for systematically solving systems of linear equations by taking an augmented matrix directly to RREF. The procedure requires:
+i. matrices containing only 0s are already in REF
+ii. the first column from the left containing a non-zero entry has its value denoted as 'a',
+swap the row containing 'a' with the first row
+iii. divide the entire top row by 'a' to turn the leading element into a 1
+iv. use elementary row operations to make all entries below the leading 1 equal 0 by subtracting multiples of the top row from each row below it
+v. excluding the first row, repeat steps i - iv on each resulting matrix
+
+Once completed, the results are easy-to-read and can be interpreted to determine a single, infinitely many, or no solutions at all.
+
+
+Gaussian elimination
+
+The aim here is to solve a system of linear equations by simplifying the matrix and determining if there's an existing solution. The Gaussian algorithm 
+is applied to bring the augmented matrix to RREF, which allows the results to be interpreted as discussed. While the Gaussian Algorithm outlined above 
+shows the steps required, the overall elimination process encapsulates the algorithm and elimination outcome. The algorithm provides the recipe while the
+elimination process involves using the recipe to achieve the desired outcome. 
+
+
+Rank of a Matrix
+
+The rank of a matrix is determined by the number of leading 1s in the REF matrix (achieved through row operations). This determines the number of linearly 
+independant rows/columns. Since row ops don't change the linear independence of each row, if there are linearly-dependant rows, the REF will matrix will contain 
+some rows of zeros. Each row pivot is linearly independent, and the number of such pivots determins the matrix rank. 
+
+Properties:
+i. matrix rank is always less or equal to floor(rows, cols)
+ii. matrix rank is equal to number of linearly independent columns
+iii. row ops preserve matrix rank
+iv. matrix rank is equal to the number of matrix column space
+
+This provides important insight when it comes to interpreting system solutions and linear transformations.
+
+
+Rank and solutions to a system of linear equations
+
+Rank and solutions provide the basis for interpreting the results of solving a system of linear equations.
+If the system has at least one solution, then it's considered to be consistent.
+Considering a scenario where a system of 'm' equations in 'n' variables is consistent, and the rank of the augmented
+matrix is 1 (r1), the set of solutions involved exactly n - r params; the number of free variables equals the difference 
+between matrix variables total, and matrix rank:
+i. When there are more variables than the matrix rank (if r < n) there are infinitely many solutions
+ii. When the matrix contains full rank, where all columns are linearly independent, there's exactly one set of values 
+(one solution) for the system
+iii. When the matrix rank is less than the number of equations, and less than the number of variables, there is no solution.
+
+The solveability of the system is therefore determined by the rank of the matrix.
+
+
+Homogeneous system of equations
+
+A system of linear equations is considered homogeneous if each equation's constant term is 0:
+
+- Homogeneous systems always have at least one solution, even if it's only the trivial solution
+- The trivial solution, where all variables are 0s, is a solution to a homogenous system 
+- Infinitely many solutions are typical for homogeneous systems, expressed with free variables
+- Any linear combination of the solution to a homogeneous system is also a solution (it will still 
+solve each equation)
+
+
+Trivial/non-trivial solutions
+
+The trivial solution contains 0s for each variable, as well as the constant term. This is always a solution
+to a homogeneous system. Any solution containing at least a single non-zero variable is considered non-trivial.
+This distinction determines whether variables for one equation in the system are linearly-dependant, and are
+expressed as a linear combination of the variables.
+
+
+Basic Solutions
+
+Basic solutions arise from applying the Gaussian Algorithm to a homogeneous linear system. This results
+in a single particular solution, or a set of solutions with free variables as params. These free variables
+can take on any value. When expressing basic solutions with paramaterisation, the representation form is 
+referred to as parametric form, or the general solution to the system. This provides clear, readable insight
+to the structure of the solution with direct application to further processing.
+
+
+Rank and homogeneous systems
+
+For a homogeneous m * n system with r rank and n - r basic solutions, every solution to the homogeneous
+system can be expressed as a linear combination of the n - r basic solutions. Each basic solution can be scaled
+by a constant and added together to obtain this.
+
+This outlines how the rank of a homogeneous system can be used to determine the existence and nature of a solution,
+find the general solution, and help to analyse the matrix properties.
