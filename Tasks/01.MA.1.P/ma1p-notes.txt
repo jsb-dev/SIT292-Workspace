@@ -113,10 +113,9 @@ If the system has at least one solution, then it's considered to be consistent.
 Considering a scenario where a system of 'm' equations in 'n' variables is consistent, and the rank of the augmented
 matrix is 1 (r1), the set of solutions involved exactly n - r params; the number of free variables equals the difference 
 between matrix variables total, and matrix rank:
-i. When there are more variables than the matrix rank (if r < n) there are infinitely many solutions
-ii. When the matrix contains full rank, where all columns are linearly independent, there's exactly one set of values 
-(one solution) for the system
-iii. When the matrix rank is less than the number of equations, and less than the number of variables, there is no solution.
+i. When the rank of the cofficient matrix (LHS) is less than the rank of the augmented matrix, there's no solution
+ii. When the rank equals the number of variables, there's a unique solution
+iii. When the rank is less than the number of variables, there are infinitely many solutions
 
 The solveability of the system is therefore determined by the rank of the matrix.
 
