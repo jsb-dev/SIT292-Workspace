@@ -1,0 +1,4 @@
+Let A be an m×n matrix of rank r, and consider the homogeneous system in n variables with A as
+coefficient matrix. Then:
+1. The system has exactly n−r basic solutions, one for each parameter.
+2. Every solution is a linear combination of these basic solutions.

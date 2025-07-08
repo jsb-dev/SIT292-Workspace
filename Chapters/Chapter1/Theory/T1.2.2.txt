@@ -1,0 +1,5 @@
+Suppose a system of m equations in n variables is consistent, and that the rank of the augmented
+matrix is r.
+1. The set of solutions involves exactly n−r parameters.
+2. If r < n, the system has infinitely many solutions.
+3. If r = n, the system has a unique solution.
