@@ -52,18 +52,7 @@ Row-Echelon Form (Reduced)
 This aims to simplify a matrix that's in REF (not reduced). REF depicts a system in a matrix with an upper-right
 triangle of values, with the lower-left consisting only of 0s, and leading 1's as the pivot (first value) for each row:
 
-e.g. Matrix in REF
-[ 1 2 3 | 5 ]
-[ 0 1 4 | 7 ]
-[ 0 0 1 | 9 ]
-
 RREF takes this one step further by satisfying one more condition: Each leading 1 is the only non-zero entry in its row.
-
-e.g. Matrix in RREF
-[ 1 0 0 | 2 ]
-[ 0 1 0 | 3 ]
-[ 0 0 1 | 4 ]
-
 RREF presents an easy-to-read format for interpreting the resulting solutions for each variable. Since each 1 corresponds to a 
 specific variable (x, y, z for e.g. in the above), and the constant term is defined for each in its corresponding final column. 
 A row containing no leading 1 is a free variable, meaning that it can take on any value, and the other variables in the system 
@@ -156,3 +145,53 @@ by a constant and added together to obtain this.
 
 This outlines how the rank of a homogeneous system can be used to determine the existence and nature of a solution,
 find the general solution, and help to analyse the matrix properties.
+
+
+Module Summary
+
+The goals of this module revolve around solving systems of linear equations and interpreting their results based on properties like rank
+and solutions. The goals were:
+
+1) Apply elementary row operations to systems of linear equations represented in matrix form
+2) Apply the Gaussian Algorithm to reduce a matrix to row-echelon form
+3) Express the general solution to a homogeneous equation as a linear combination of sets of basic solutions
+
+The module was geared towards solving problems with multiple variables and known scalars, revealing the fundametal relationships between each.
+Based on the prerequisite content involving algebraic rules and functions, sets, graph curves, etc., this module required a slight paradigm shift to focus on
+linear relationships in matrix form with solution vectors. Each operation and algorithm covered is aimed toward reducing the system to a clear, easily-interpretable form that's
+equal to the original system. 
+
+The module explored elementary row operations, which provided the stepping-stones for reducing the matrix to REF and RREF.
+
+Elementary row operations have strategic use-cases when reducing a matrix, particularly:
+SWAP ROWS - Most useful for getting a non-zero value as the pivot without introducing fractions, good starting point. 
+MULTIPLY BY SCALAR - Perfect for simplifying and normalising rows, reducing 
+MULTIPLY BY SCALAR OF ANOTHER ROW - Go-to for eliminating entries below the pivot, very important for Gaussian elimination.
+Learning to use the fundamental row operations helped build my intuition for the rules and processes of this module.
+
+Additional matric properties, like rank, reveal convenient insight for interpreting the final solution for a problem:
+No Solution - If the rank of the coefficient matrix (LHS) is less than the rank of the augmented matrix, the system is inconsistent
+Unique Solution - If the rank of the coefficient matrix equals the rank of the augmented matrix, there exists one solution (set)
+Infinitely Many Solutions - If the rank of the coefficient matrix is less than the rank of the augmented matrix, there are free variables that can take on any value
+
+What is the advantage of Gaussian elimination over a substitution type of approach when you have systems with a large number of variables?
+
+Gaussian elimination provides a compact method for reducing systems of linear equations to a form that's easy to 
+interpret and solve. It relies on strategically applying row operations to manipulate 
+the augmented matrix, bringing the system to RREF. A substitution approach involves solving for one variable at a time, 
+substituting the values back into each equation, and solving for the next variable. This is rather intensive for larger 
+systems with lots of variables. Since substitution requires solving variables 
+in relation to each other, this can lead to a large stack of sub-problems, each with multiple interdependancies. As the number 
+of variables grows, mapping their relationships becomes increasingly complex, making the process longer and less efficient to solve.
+Gaussian elimination determines a clear starting point for this process and systematically reduces the problem to a point
+where the relationships are clear and easy to interpret, relying less on reiterating relationships between vars
+and instead on following a recipe with proven steps.
+
+Finally, the module unpacked Homogeneous systems, where all constant terms are 0 and the trivial solution is always present.
+The trivial solution is a special case of the general solution, where all variables are 0s. Though trivial, it is always a valid solution.
+These systems often contain infinitely many solutions, giving rise to free variables of arbitrary values. Any linear combination of 
+the basic solutions is also a solution, so adding multiples of a solution to itself will still satisfy the system (it will still read true).
+
+Summarily, this module provided a comprehensive starting-point for solving linear relationships in systems with multiple unknown variables. By arranging
+a system into a matrix and reducing the matrix to RREF (through Gaussian elimination), system properties are clearer and more easily interpreted
+to determine the nature of the solution. Homogenoeous systems extend upon this by providing a trivial solution and infinitely many solutions, which can be expressed as linear combinations of basic solutions.
