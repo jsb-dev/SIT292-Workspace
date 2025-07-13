@@ -1,0 +1,2 @@
+If a homogeneous system of linear equations has more variables than equations, then it has a
+nontrivial solution (in fact, infinitely many).
