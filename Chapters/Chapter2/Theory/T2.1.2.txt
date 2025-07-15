@@ -1,0 +1,6 @@
+Let A and B denote matrices of the same size, and let k denote a scalar.
+
+1. If A is an m×n matrix, then AT is an n×m matrix.
+2. (AT )T = A.
+3. (kA)T = kAT .
+4. (A+B)T = AT +BT .

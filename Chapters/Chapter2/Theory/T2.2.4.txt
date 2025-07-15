@@ -1,0 +1,5 @@
+Let Ax = b be a system of equations with augmented matrix [ A | b ]. Write rank A = r.
+
+1. rank [ A | b ] is either r or r +1.
+2. The system is consistent if and only if rank [ A | b ]= r.
+3. The system is inconsistent if and only if rank [ A | b ]= r +1

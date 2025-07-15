@@ -1,0 +1,3 @@
+Suppose x1 is any particular solution to the system Ax = b of linear equations. Then every solution
+x2 to Ax = b has the form x2 = x0 +x1
+for some solution x0 of the associated homogeneous system Ax = 0.

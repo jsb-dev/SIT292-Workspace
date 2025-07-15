@@ -1,0 +1,11 @@
+Let A, B, and C denote arbitrary m×n matrices where m and n are fixed. Let k and p denote
+arbitrary real numbers. Then:
+
+1. A+B = B+A.
+2. A+(B+C) = (A+B)+C.
+3. There is an m×n matrix 0, such that 0+A = A for each A.
+4. For each A there is an m×n matrix, −A, such that A+(−A) = 0.
+5. k(A+B) = kA+kB.
+6. (k + p)A = kA+ pA.
+7. (kp)A = k(pA).
+8. 1A = A.

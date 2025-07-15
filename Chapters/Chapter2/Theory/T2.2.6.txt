@@ -1,0 +1,1 @@
+Let A and B be m×n matrices. If Ax = Bx for all x in Rn, then A = B.
