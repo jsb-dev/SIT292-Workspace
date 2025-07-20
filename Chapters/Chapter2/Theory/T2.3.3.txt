@@ -1,0 +1,9 @@
+Assume that a is any scalar, and that A, B, and C are matrices of 
+sizes such that the indicated matrix products are defined. Then:
+
+1. IA = A and AI = A where I denotes an identity matrix.
+2. A(BC) = (AB)C
+3. A(B+C) = AB+AC
+4. (B+C)A = BA+CA
+5. a(AB) = (aA)B = A(aB)
+6. (AB)T = BT AT 
