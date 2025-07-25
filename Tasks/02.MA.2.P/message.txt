@@ -1,0 +1,177 @@
+(Notes) Matrix Multiplication
+
+# Modules Notes
+
+## If A and B are matrices of the same size, their sum A + B is the matrix formed by adding corresponding entries, i.e. for the entries aᵢⱼ and bᵢⱼ in A and B, the entry in the matrix A + B will be aᵢⱼ + bᵢⱼ.
+
+- Matrices have to be of matching dimensions for addition, no implementation for addition of non-equal matrices
+
+
+
+## If A is any matrix and k is any number, the scalar multiple kA is the matrix obtained from A by multiplying each entry of A by k, i.e. k·aᵢⱼ for all entries.
+
+- this is the essence of the most basic linear scaling of systems, where we can take any real number and scale the system up and down while still being equal
+
+
+
+## Let A, B, and C denote arbitrary m×n matrices where m and n are fixed. Let k and p denote arbitrary real numbers. Then
+
+1. A+B = B+A 
+2. A+(B+C) = (A+B)+C 
+3. There is an m×n matrix 0, such that 0+A = A for each A 
+4. For each A there is an m×n matrix, −A, such that A+(−A) = 0 
+5. k(A+B) = kA+kB 
+6. (k+ p)A = kA+ pA 
+7. (kp)A = k(pA) 
+8. 1A = A 
+
+- These are the algebraic rules for valid matrix addition, it’s intuitive and they don’t seem to deviate much from standard addition 
+
+
+
+## If A is an m×n matrix, the transpose of A, written Aᵀ, is the n×m matrix whose rows are just the columns of A in the same order
+
+- we make the rows columns and the columns rows, the transpose always exists for an m*n matrix 
+
+
+
+## Let A and B denote matrices of the same size, and let k denote a scalar.
+
+1. If A is an m×n matrix, then Aᵀ is an n×m matrix.  
+2. (Aᵀ)ᵀ = A  
+3. (kA)ᵀ = kAᵀ  
+4. (A + B)ᵀ = Aᵀ + Bᵀ
+
+- NOTE the transpose cancels itself out and only applies to matrices, so it distributes over matrix addition but doesn’t interact with scalars 
+
+
+
+## Let ℝ denote the set of all real numbers. The set of all ordered n-tuples from ℝ is denoted by ℝn
+
+Where ordered n-tuples are sets of n elements ordered specifically, Rn denotes all ordered n-tuples in the space of real numbers. Rn denotes the whole set of all possible ordered n-tuples with each element existing in the space of real numbers.
+
+- finite sets of ordered numbers existing only in the set of real numbers, the R^n space is the entire domain of possible variables, solutions, and the vectors acting on them
+
+
+
+## Let A be an m×n matrix, and let x ∈ ℝⁿ.
+
+Write A in terms of its columns: A = [a₁ a₂ ⋯ aₙ]
+Write x as an n-vector:
+x = [x₁
+     x₂
+      ⋮
+     xₙ]
+
+Define A·x to be the m-vector in ℝᵐ: A·x = x₁a₁ + x₂a₂ + ⋯ + xₙaₙ
+
+- This is our main mechanism for matrix multiplication, iterating between the A row and B column for dot products 
+
+
+
+## Let A and B be m×n matrices, and let x, y ∈ ℝⁿ.
+
+1. A(x + y) = Ax + Ay  
+2. A(a·x) = a(Ax) = (aA)x for all scalars a  
+3. (A + B)x = Ax + Bx
+
+1) Distribution with matrix and vector addition: Scaling a matrix A by the addition of two vectors x and y is the same as scaling A by each vector individually before adding them together.
+2) Scalar multiplication with vector/matrix mult: 
+
+- Multiplying matrix A by the product of a scalar a and vector x
+- Multiplying matrix A by vector x and scaling the result by scalar a
+
+- Always respect the original order of matrix/vector multiplication, but scalars have much more flexibility in terms of reordering  
+
+
+
+## If (a₁, a₂, ..., aₙ) and (b₁, b₂, ..., bₙ) are two ordered n-tuples in ℝⁿ, then their dot product is defined to be the number:
+
+a₁b₁ + a₂b₂ + ⋯ + aₙbₙ
+
+Obtained by multiplying corresponding entries and adding the results
+
+- a 1*n vector multiplied by an n*1 vector leads to a single dot product, matrix multiplication is iteratively multiplying vectors 
+
+
+
+## Suppose x₁ is any particular solution to the system Ax = b of linear equations. Then every solution x₂ to Ax = b has the form
+
+x₂ = x₀ + x₁
+
+for some solution x₀ of the associated homogeneous system Ax = 0.
+
+- Callback to solutions of systems being a combo, of a particular solution and a solution to the corresponding homogeneous system 
+
+
+
+## Let Ax = b be a system of equations with augmented matrix [A | b ].  Let rank A = r.
+
+1. rank [A | b ] is either r or r + 1
+2. The system is consistent if and only if rank [A | b ] = r 
+3. The system is inconsistent if and only if rank rank [A | b ] = r + 1
+
+- REMEMBER to maintain the distinction of A from Ax = b, the rank differences between each is what provide the earliest insight for the nature of the solution 
+
+
+
+## Let A be an m×n matrix and x an n-vector in ℝⁿ. Each entry of the vector Ax is the dot product of the corresponding row of A with x.
+
+Multiplying matrix A by n-vector x will result in an n-vector where each entry is achieved by multiplying each element from the corresponding row in A, with their corresponding column value in x, and adding the products together.
+
+- multiplying by a compatible column-vector will return a column vector, remember a column vector is only filled in the n-dimension
+
+
+
+## Let A and B be m×n matrices. If Ax = Bx for all x ∈ ℝⁿ, then A = B.
+
+- this relates directly to linear scalar multiplication behaviour, it doesn’t change the original system so they would have to be equal for this to be true 
+
+
+
+## TA is the matrix transformation induced by A. TA: ℝⁿ → ℝᵐ defined by TA(x) = Ax for all x ∈ ℝⁿ.
+
+Matrices can be applied to vectors to transform them. Take a vector in n-dimensional space (1 column of rows). Applying the transformation induced by A reshapes the vector into m-dimensional space (1 row of columns). Where Ax is the notation for matrix A multiplied by vector x, TA(x) denotes the linear transformation A applies to x.
+
+- matrix transformations are like a function we can call for achieving the desired outcome without contradicting the original system, but at the end of the day it just applies a matrix to a vector through multiplication, THE TRANSFORMATION TYPE/DESC ARE THE FOCUS HERE 
+
+
+
+## Let A be an m×n matrix, let B = [b₁ b₂ ⋯ bₖ] be an n×k matrix, where bⱼ is column j of B for each j.  
+
+The product matrix AB is the m × k matrix defined as follows:
+
+AB = A[b₁ b₂ ⋯ bₖ] = [Ab₁ Ab₂ ⋯ Abₖ]
+
+Regarding matrix multiplication, the dot product of a row from A with corresponding column from B will be the result for each entry.
+
+- matrix multiplication works even if B isn’t n * m, only the A col value needs to match the B row value, but the other 2 can be completely different 
+
+
+
+## Let A be an m×n matrix and let B be an n×k matrix.
+
+Then the product matrix AB is m × k and satisfies:  
+
+A(Bx) = (AB)x for all x ∈ ℝᵏ
+
+- Remember that the resulting matrix will be (A row count) * (B col count) dimensions 
+
+
+
+## Let A and B be matrices of sizes m×n and n×k, respectively. Then the (i, j)-entry of AB is the dot product of row i of A with column j of B.
+
+- referencing cells by their row-column location, like 2D arrays
+
+
+
+## Assume that α is any scalar, and that A, B, and C are matrices of sizes such that the indicated matrix products are defined, and I is an identity matrix. Then:
+
+1. IA = A  and  AI = A  
+2. A(BC) = (AB)C  
+3. A(B + C) = AB + AC  
+4. (B + C)A = BA + CA  
+5. α(AB) = (αA)B = A(αB)  
+6. (AB)ᵀ = BᵀAᵀ
+
+- the algebraic rules for matrix scaling and addition are largely unchanged from their traditional counterparts, SO LONG as the order of matrix multiplication is respected 

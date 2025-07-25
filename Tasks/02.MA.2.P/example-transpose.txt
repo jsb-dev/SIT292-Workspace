@@ -1,0 +1,45 @@
+These are the original matrices
+
+A = ( 1 2
+      3 4)
+​
+B = ( 5 6
+      7 8 )
+
+These are their transposes
+
+A^T = ( 1 3
+        2 4 )
+​
+B^T = ( 5 7
+        6 8 )
+
+The product of the original matrices
+
+AB = ( Ar1*Bc1 Ar1*Bc2
+       Ar2*Bc1 Ar2*Bc2 )
+
+AB = ( 19 22
+       43 50 )
+
+The transpose of AB is therefore AB^T = ( 19 43
+                                          22 50 )
+
+The product of the transposed matrices, in order unchanged:
+
+A^T * B^T = ( 1*5 + 3*6     1*7 + 3*8
+              2*5 + 4*6     2*7 + 4*8 )
+
+          = ( 23 31 
+              34 46 )
+
+BUT if the transposed matrices order is inverted
+
+B^T * A^T = ( 1*5 + 2*7     1*6 + 2*8
+              3*5 + 4*7     3*6 + 4*8 )
+            
+          = ( 19 22
+              43 50 )
+
+Therefore (AB)^T = B^TA^T, NOT A^TB^T
+
