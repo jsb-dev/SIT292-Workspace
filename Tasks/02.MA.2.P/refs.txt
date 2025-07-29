@@ -1,0 +1,15 @@
+Report and Notes
+
+[1] M. Burzynski, “Matrix Multiplication,” Mathematics for Game Developers, LibreTexts. [Online]. 
+Available: https://math.libretexts.org/Bookshelves/Applied_Mathematics/Mathematics_for_Game_Developers_(Burzynski)/04%3A_Matrices/4.03%3A_Matrix_Multiplication. 
+Accessed: 22/07/2025.
+
+[2] Matrix-Vector Multiplications, Math, Numerics, and Programming (for Mechanical Engineers), LibreTexts. [Online]. 
+Available: https://math.libretexts.org/Courses/Mission_College/MAT_04C_Linear_Algebra_(Kravets)/02%3A_Matrices/2.02%3A_Multiplication_of_Matrices. 
+Accessed: 22/07/2025.
+
+Verification
+
+[3] Apple Inc., “Calculator,” App Store. [Online]. 
+Available: https://apps.apple.com/us/app/calculator/id458535809. 
+Accessed: 22/07/2025.
