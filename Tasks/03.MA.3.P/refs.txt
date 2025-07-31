@@ -1,0 +1,9 @@
+https://math.libretexts.org/Bookshelves/Linear_Algebra/Interactive_Linear_Algebra_(Margalit_and_Rabinoff)/03%3A_Linear_Transformations_and_Matrix_Algebra/3.05%3A_Matrix_Inverses
+
+https://math.libretexts.org/Bookshelves/Linear_Algebra/Fundamentals_of_Matrix_Algebra_(Hartman)/02%3A_Matrix_Arithmetic/2.07%3A_Properties_of_the_Matrix_Inverse
+
+https://math.libretexts.org/Bookshelves/Linear_Algebra/A_First_Course_in_Linear_Algebra_(Kuttler)/02%3A_Matrices/2.08%3A_Elementary_Matrices
+
+https://math.libretexts.org/Bookshelves/Linear_Algebra/A_First_Course_in_Linear_Algebra_(Kuttler)/02%3A_Matrices/2.07%3A_Finding_the_Inverse_of_a_Matrix
+
+https://math.libretexts.org/Bookshelves/Linear_Algebra/A_First_Course_in_Linear_Algebra_(Kuttler)/05%3A_Linear_Transformations/5.01%3A_Linear_Transformations
