@@ -1,0 +1,198 @@
+\documentclass[
+  12pt,
+  a4paper,
+]{article}
+
+% Template made by Visal Dam
+
+%%%% CONFIGS %%%%
+\usepackage{amsmath,amssymb,mathtools,geometry,tcolorbox}
+\usepackage{bm}
+
+\newtcolorbox{box_cyan}[1]{
+coltitle=white,
+    colback=cyan!10, 
+    colframe=cyan!50!white, 
+    fonttitle=\bfseries\sffamily,
+    toptitle=1mm,
+    bottomtitle=1mm,
+    titlerule=0mm,
+    arc=2mm,
+    boxrule=0.5pt,
+title={#1}
+}
+
+
+
+%%%% CONTENT %%%%
+\title{Module 4 Summary}
+\author{Your Name}
+\date{dd/mm/yyyy}
+
+\newcommand{\lcm}{\mbox{lcm}}
+
+\begin{document}
+\maketitle
+
+
+
+\section*{Response to Feedback} 
+
+\textbf{If you are resubmitting}, include a statement outlining the changes you have made to your submission. This section can be short but should be precise. It is a good idea to quote the feedback you are responding to.
+\begin{itemize}
+    \item ... % N/A if none, else enter here (remove the '...').
+\end{itemize}
+
+\noindent
+\textbf{If this is your first submission}, include a statement about what part of the lesson review you would most like to receive feedback (and why). Your tutor will take this into consideration when reviewing your work, although they may choose to give you feedback on a different thing if they think it’s more appropriate. 
+\begin{itemize}
+    \item ... % N/A if none, else enter here (remove the '...').
+\end{itemize}
+
+\section*{Module Learning Objectives}
+I certify that I achieved the following learning objectives for the module (these objectives can be found in the introduction of the module):
+\begin{enumerate}
+    \item ...
+    \item ...
+    % etc...
+\end{enumerate}
+
+\vspace{2cm}
+
+\section*{Key Definitions and Theorems}
+
+%%%% INSTRUCTIONS %%%%  
+% Please complete the following 'Key Definitions and Theorems' section by filling in the 'Learning Notes' (the '\\...' parts) with any notes you may have taken as part of your studies for that particular topic/concept/definition/theorem/technique.
+
+\noindent
+\textbf{The Cofactor Expansion}
+
+\begin{box_cyan}{Determinant Calculation for a 3×3 matrix
+}
+For a 3×3 matrix A, the \underline{determinant} is given by
+$$\text{det(A)} = \left|\begin{matrix}a&b&c\\d&e&f\\g&h&i\\\end{matrix}\right|$$
+$$=aei+bfg+cdh-ceg-afh-bdi$$
+$$=a\left(ei-fh\right)-b\left(di-fg\right)+c\left(dh-eg\right)$$
+$$=a\left|\begin{matrix}e&f\\h&i\\\end{matrix}\right|-b\left|\begin{matrix}d&f\\g&i\\\end{matrix}\right|+c\left|\begin{matrix}d&e\\g&h\\\end{matrix}\right|$$
+\end{box_cyan}
+\noindent
+Learning Notes:
+\\...
+
+\begin{box_cyan}{Definition 3.1: Cofactors of a matrix }
+Assume that determinants of (n - 1) × (n - 1) matrices have been defined. Given the n × n matrix A, let
+A$_{ij}$ denote the (n - 1) × (n - 1) matrix obtained from A by deleting row $i$ and column $j$. Then the ($i$, $j$)-\underline{cofactor} $c_{ij}$(A) is the scalar defined by
+$$c_{ij}(\text{A}) = (-1)^{i+j} \text{det}(\text{A}_{ij})$$
+Here $(-1)^{i+j}$ is called the sign of the $(i, j)$-position.
+\end{box_cyan}
+\noindent
+Learning Notes:
+\\...
+
+\begin{box_cyan}{Definition 3.2: Cofactor expansion of a matrix}
+Assume that determinants of (n - 1) × (n - 1) matrices have been defined. If A = [$a_{ij}$] is n × n define,
+$$\text{det(A)} = a_{11}c_{11}(\text{A}) + a_{12}c_{12}(\text{A}) + ... + a_{1n}c_{1n}(\text{A})$$
+
+This is called the cofactor expansion of det A along row 1.
+\end{box_cyan}
+\noindent
+Learning Notes:
+\\...
+
+\begin{box_cyan}{Theorem 3.1.2: Determinant properties}
+Let A denote an n × n matrix. 
+\begin{enumerate}
+    \item If A has a row or column of zeros, det(A) = 0.
+    \item If two distinct rows (or columns) of A are interchanged, the determinant of the resulting matrix is $-\det(A)$.
+    \item If a row (or column) of A is multiplied by a constant $u$, the determinant of the resulting matrix is $u(\det(A))$.
+    \item If two distinct rows (or columns) of A are identical, $\det(A)=0$.
+    \item If a multiple of one row of A is added to a different row (or if a multiple of a column is added to a different column), the determinant of the resulting matrix is $\det(A)$.
+\end{enumerate}
+\end{box_cyan}
+\noindent
+Learning Notes:
+\\...
+
+\noindent
+\textbf{Determinants and matrix inverses}
+
+\begin{box_cyan}{Theorem 3.2.1: Product theorem}
+If A and B are n × n matrices, then 
+$$\text{det(AB)} = \text{det(A)} \text{det(B)}.$$
+\end{box_cyan}
+\noindent
+Learning Notes:
+\\...
+
+\begin{box_cyan}{Theorem 3.2.2: Det relationship to inverse}
+An n × n matrix A is invertible if and only if det A $\neq$ 0. When it is invertible, we have,
+$$\det{\left(A^{-1}\right)=\frac{1}{\det{A}}}$$
+\end{box_cyan}
+\noindent
+Learning Notes:
+\\...
+
+\begin{box_cyan}{Theorem 3.2.3: Det of transpose}
+If A is any square matrix, det(A$^T$) = det(A).
+\end{box_cyan}
+\noindent
+Learning Notes:
+\\...
+
+\begin{box_cyan}{Theorem 3.2.4: Adjugate formula}
+If A is any square matrix, then
+$$\text{A(adj A)} = (\det{\text{A}})\text{I} = \text{(adj A)A}$$
+In particular, if det A $\neq$ 0, the inverse of A is given by
+$$\text{A}^{-1}=\frac{1}{\det{\text{A}}}\text{adj A}$$
+\end{box_cyan}
+\noindent
+Learning Notes:
+\\...
+
+\textbf{LU Factorisation}
+
+\begin{box_cyan}{Theorem 2.7.1: LU Theorem}
+If A can be lower reduced to a row-echelon matrix U, then 
+$$\text{A = LU}$$
+where L is lower triangular and invertible and U is upper triangular and row-echelon.
+\end{box_cyan}
+\noindent
+Learning Notes:
+\\...
+
+\begin{box_cyan}{LU Algorithm}
+Let A be an $m$ × $n$ matrix of rank $r$, and suppose that A can be lower reduced to a row-echelon matrix U . Then A = LU where the lower triangular, invertible matrix L is constructed as follows:
+\begin{enumerate}
+    \item If A = 0, take L = I$_m$ and U = 0.
+    \item If A $\neq$ 0, write A$_1$ = A and let $\bm{c}_1$ be the leading column of A$_1$. Use $\bm{c}_1$ to create the first leading 1 and create zeros below it (using lower reduction). When this is completed, let A$_2$ denote the matrix consisting of rows 2 to $m$ of the matrix just created.
+    \item If A$_2 \neq$ 0, let $\bm{c}_2$ be the leading column of A$_2$ and repeat Step 2 on A$_2$ to create A$_3$.
+    \item Continue in this way until U is reached, where all rows below the last leading 1 consist of zeros. This will happen after $r$ steps.
+    \item Create L by placing $\bm{c}_1, \bm{c}_2, ..., \bm{c}_r$ at the bottom of the first $r$ columns of I$_m$.
+\end{enumerate}
+\end{box_cyan}
+\noindent
+Learning Notes:
+\\...
+
+\section*{Summarising your understanding: }
+
+\begin{itemize}
+    \item Add notes to the definitions and theorems above that reflect your understanding of the definition/theorem, how it relates to the learning objectives, and things to keep in mind when applying – these notes can be somewhat informal but should be understandable to your OnTrack tutor. 
+\end{itemize}
+\noindent
+Write a mathematical summary for the module that includes the questions/tasks in the dot points below. Note that the summary should include more than just the questions - we’d recommend having a subheading for each sub-module, and then include the guiding questions where appropriate. 
+\begin{itemize}
+    \item Summarise Cramer’s rule and how it works. Include as reference any of the relevant definitions and theorems.
+    \item Include a worked example of applying some of the rules in Theorem 3.1.2 to simplify the calculation of a larger determinant.
+    \item Write a statement on LU factorisation and when it can be applied. 
+\end{itemize}
+
+
+\section*{Reflecting on the content:}
+\begin{itemize}
+    \item Reflect on what you found interesting/difficult in this module, how it relates to previous content covered in this and other units, and which parts helped you to meet each of the learning objectives. This should be written from your personal perspective and not just read as a general summary of the topic.
+\end{itemize}
+
+
+
+\end{document}
