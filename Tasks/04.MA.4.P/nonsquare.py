@@ -140,7 +140,7 @@ def mat_mult(A, B):
 
 def main():
     A_tall = [[-2, -2, 4], [-3, -1, 8], [3, 1, -6], [2, 1, -3]]
-    A_wide = [[2, 6, -2, 0, 2], [3, 9, -3, 3, 1], [-1, -3, 1, -3, 1]]
+    A_wide = [[3, -3, -6, 9], [3, -4, -8, 6], [-2, 3, 6, -3]]
 
     print("=" * 70)
     print("TUTORIAL: LU FACTORIZATION WITH ROW OPERATIONS EXPLANATION")
