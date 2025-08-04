@@ -56,7 +56,7 @@ def print_matrix(M):
 
 
 def main():
-    A = [[3, -6, -3, 9], [1, 1, -1, 9], [2, -7, -2, 0], [0, -3, 0, -6]]
+    A = [[-1, -2, -3], [1, 1, 1], [3, 8, 11]]
 
     print("Original matrix A:")
     print_matrix(A)

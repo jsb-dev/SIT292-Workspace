@@ -139,12 +139,13 @@ def mat_mult(A, B):
 
 
 def main():
-    A_tall = [[-1, 1, 3], [-3, 5, 13], [2, -4, -7], [3, -2, -8]]
+    A_tall = [[-2, -2, 4], [-3, -1, 8], [3, 1, -6], [2, 1, -3]]
+    A_wide = [[2, 6, -2, 0, 2], [3, 9, -3, 3, 1], [-1, -3, 1, -3, 1]]
 
     print("=" * 70)
     print("TUTORIAL: LU FACTORIZATION WITH ROW OPERATIONS EXPLANATION")
     print("=" * 70)
-    print("Example Matrix (4x3):")
+    print("Example Tall Matrix (4x3):")
     print_matrix(A_tall, "A")
 
     print("\nLet's factorize this matrix step by step:")
@@ -155,7 +156,7 @@ def main():
     print("   - Use this row to eliminate below")
     print("3. For rows without pivots, we'll copy them to U")
 
-    input("\nPress Enter to begin the factorization...")
+    input("\nPress Enter to begin the tall matrix factorization...")
 
     L, U = lu_factorization_nonsquare(A_tall)
 
@@ -163,6 +164,20 @@ def main():
     LU = mat_mult(L, U)
     print_matrix(LU, "L * U")
     print_matrix(A_tall, "Original A")
+    print("These should be identical!")
+
+    print("\n" + "=" * 70)
+    print("Now let's try a WIDE matrix example (3x4):")
+    print_matrix(A_wide, "A_wide")
+
+    input("\nPress Enter to begin the wide matrix factorization...")
+
+    L_wide, U_wide = lu_factorization_nonsquare(A_wide)
+
+    print("\nVerification:")
+    LU_wide = mat_mult(L_wide, U_wide)
+    print_matrix(LU_wide, "L * U")
+    print_matrix(A_wide, "Original A_wide")
     print("These should be identical!")
 
 
