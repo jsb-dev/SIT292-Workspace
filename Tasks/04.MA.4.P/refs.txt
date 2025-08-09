@@ -1,0 +1,31 @@
+https://math.libretexts.org/Bookshelves/Differential_Equations/Applied_Linear_Algebra_and_Differential_Equations_(Chasnov)/02:_II._Linear_Algebra/02:_Systems_of_Linear_Equations/2.05:_LU_Decomposition
+
+https://www.geeksforgeeks.org/engineering-mathematics/l-u-decomposition-system-linear-equations/
+
+https://math.libretexts.org/Courses/Irvine_Valley_College/Math_26%3A_Introduction_to_Linear_Algebra/02%3A_Linear_Transformations_and_Matrix_Algebra/2.06%3A_Cofactor_Expansions/2.6.02%3A_Cramer's_Rule_and_Adjugates
+
+https://math.libretexts.org/Bookshelves/Linear_Algebra/Interactive_Linear_Algebra_(Margalit_and_Rabinoff)/04%3A_Determinants/4.02%3A_Cofactor_Expansions
+
+
+Summary, notes
+
+[1] J. Chasnov, “LU Decomposition,” Applied Linear Algebra and Differential Equations, LibreTexts, [Online]. 
+Available: https://math.libretexts.org/Bookshelves/Differential_Equations/Applied_Linear_Algebra_and_Differential_Equations_(Chasnov)/02:_II._Linear_Algebra/02:_Systems_of_Linear_Equations/2.05:_LU_Decomposition. 
+[Accessed: 05-Aug-2025].
+
+[2] GeeksforGeeks, “LU Decomposition," Engineering Mathematics [Online]. 
+Available: https://www.geeksforgeeks.org/engineering-mathematics/l-u-decomposition-system-linear-equations/. 
+[Accessed: 05-Aug-2025].
+
+[3] D. Margalit & J. Rabinoff, “Cramer’s Rule and Adjugates,” Irvine Valley College, LibreTexts, [Online]. 
+Available: https://math.libretexts.org/Courses/Irvine_Valley_College/Math_26%3A_Introduction_to_Linear_Algebra/02%3A_Linear_Transformations_and_Matrix_Algebra/2.06%3A_Cofactor_Expansions/2.6.02%3A_Cramer's_Rule_and_Adjugates. 
+[Accessed: 03-Aug-2025].
+
+[4] D. Margalit & J. Rabinoff, “Cofactor Expansions,” Georgia Institute of Technology, LibreTexts, [Online]. 
+Available: https://math.libretexts.org/Bookshelves/Linear_Algebra/Interactive_Linear_Algebra_(Margalit_and_Rabinoff)/04%3A_Determinants/4.02%3A_Cofactor_Expansions. 
+[Accessed: 03-Aug-2025].
+
+Calculations/Verification
+
+[4] Incpt.Mobis, “Calculator Infinity,” App Store. [Online]. 
+Available: https://apps.apple.com/us/app/calculator/id458535809. 
