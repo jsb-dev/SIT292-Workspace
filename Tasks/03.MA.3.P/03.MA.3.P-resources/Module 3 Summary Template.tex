@@ -1,0 +1,231 @@
+\documentclass[
+  12pt,
+  a4paper,
+]{article}
+
+% Template made by Visal Dam
+
+%%%% CONFIGS %%%%
+\usepackage{amsmath,amssymb,mathtools,geometry,tcolorbox}
+\usepackage{bm}
+
+\newtcolorbox{box_purple}[1]{
+coltitle=white,
+    colback=violet!10, 
+    colframe=violet!50!white, 
+    fonttitle=\bfseries\sffamily,
+    toptitle=1mm,
+    bottomtitle=1mm,
+    titlerule=0mm,
+    arc=2mm,
+    boxrule=0.5pt,
+title={#1}
+}
+
+
+
+%%%% CONTENT %%%%
+\title{Module 3 Summary}
+\author{Your Name}
+\date{dd/mm/yyyy}
+
+\newcommand{\lcm}{\mbox{lcm}}
+
+\begin{document}
+\maketitle
+
+
+
+\section*{Response to Feedback} 
+
+\textbf{If you are resubmitting}, include a statement outlining the changes you have made to your submission. This section can be short but should be precise. It is a good idea to quote the feedback you are responding to.
+\begin{itemize}
+    \item ... % N/A if none, else enter here (remove the '...').
+\end{itemize}
+
+\noindent
+\textbf{If this is your first submission}, include a statement about what part of the lesson review you would most like to receive feedback (and why). Your tutor will take this into consideration when reviewing your work, although they may choose to give you feedback on a different thing if they think it’s more appropriate. 
+\begin{itemize}
+    \item ... % N/A if none, else enter here (remove the '...').
+\end{itemize}
+
+\section*{Module Learning Objectives}
+I certify that I achieved the following learning objectives for the module (these objectives can be found in the introduction of the module):
+\begin{enumerate}
+    \item ...
+    \item ...
+    % etc...
+\end{enumerate}
+
+\vspace{2cm}
+
+\section*{Key Definitions and Theorems}
+
+%%%% INSTRUCTIONS %%%%  
+% Please complete the following 'Key Definitions and Theorems' section by filling in the 'Learning Notes' (the '\\...' parts) with any notes you may have taken as part of your studies for that particular topic/concept/definition/theorem/technique.
+
+\textbf{Matrix Inverses}
+
+\begin{box_purple}{Definition 2.11: Matrix Inverse 
+}
+If A is a square matrix, a matrix B is called an \underline{inverse} of A if and only if
+$$\text{AB = I and BA = I}$$
+A matrix A that has an inverse is called \underline{an invertible} matrix and denoted A$^{-1}$.
+\end{box_purple}
+\noindent
+Learning Notes:
+\\...
+
+\begin{box_purple}{Theorem 2.4.1: Uniqueness of inverse }
+If B and C are both inverses of A, then B = C.
+\end{box_purple}
+\noindent
+Learning Notes:
+\\...
+
+\begin{box_purple}{Matrix Inversion Algorithm}
+If A is an invertible (square) matrix, there exists a sequence of elementary row operations that carry
+A to the identity matrix I of the same size, written A $\xrightarrow{}$ I. This same series of row operations
+carries I to A$^{-1}$; that is, I $\xrightarrow{}$ A$^{-1}$. The algorithm can be summarized as follows:
+$$[\text{A I}] \xrightarrow{} [\text{I A}^{-1}]$$
+where the row operations on A and I are carried out simultaneously.
+\end{box_purple}
+\noindent
+Learning Notes:
+\\...
+
+\begin{box_purple}{Theorem 2.4.4: Inverse properties}
+All the following matrices are square matrices of the same size.
+\begin{enumerate}
+    \item I is invertible and I$^{-1}$ = I.
+    \item If A is invertible, so is A$^{-1}$, and (A$^{-1}$)$^{-1}$ = A.
+    \item  If A and B are invertible, so is AB, and 
+    $$\text{(AB)}^{-1} = \text{B}^{-1}\text{A}^{-1}.$$
+    \item  If $\text{A}_1, \text{A}_2, ..., \text{A}_k$ are all invertible, so is their product $\text{A}_1\text{A}_2 \cdots \text{A}_k$, and
+    $$(\text{A}_1\text{A}_2 \cdots\text{A}_k)^{-1} = \text{A}_k^{-1}\cdots\text{A}_2^{-1}\text{A}_1^{-1}.$$
+    \item If A is invertible, so is A$^{k}$ for any $k$ $\geq$ 1, and
+    $$(\text{A}^k)^{-1} = (\text{A}^{-1})^k.$$
+    \item  If A is invertible and \textit{a} $\neq$ 0 is a number, then \textit{a}A is invertible and  
+    $$(a\text{A})^{-1} = \frac{1}{a}\text{A}^{-1}.$$
+    \item If A is invertible, so is its transpose A$^T$, and
+    $$(\text{A}^T)^{-1} = (\text{A}^{-1})^T.$$
+\end{enumerate}
+\end{box_purple}
+\noindent
+Learning Notes:
+\\...
+
+\begin{box_purple}{Theorem 2.4.5: Inverse Theorem}
+The following conditions are equivalent for an $n$×$n$ matrix A:
+\begin{enumerate}
+    \item A is invertible.
+    \item The homogeneous system A\textbf{x} = 0 has only the trivial solution \textbf{x} = 0.
+    \item A can be carried to the identity matrix I$_n$ by elementary row operations.
+    \item The system A\textbf{x} = \textbf{b} has at least one solution x for every choice of column \textbf{b}.
+    \item There exists an \textit{n}×\textit{n} matrix C such that AC = I$_n$.
+\end{enumerate}
+\end{box_purple}
+\noindent
+Learning Notes:
+\\...
+
+\noindent
+\textbf{Elementary Matrices}
+
+\begin{box_purple}{Definition 2.12: Elementary Matrices}
+An $n$×$n$ matrix E is called an elementary matrix if it can be obtained from the identity matrix I$_n$ by a single elementary row operation (called the operation corresponding to E). We say that E is of type I, II, or III if the operation is of that type: 
+\begin{enumerate}
+    \item[I.] Interchanging two rows.
+    \item[II.] Multiplying one row by a non-zero number.
+    \item[III.]	Adding a multiple of one row to a different row.
+\end{enumerate}
+\end{box_purple}
+\noindent
+Learning Notes:
+\\...
+
+\begin{box_purple}{Theorem 2.5.4: Uniqueness of reduced row-echelon form}
+If a matrix A is carried to reduced row-echelon matrices R and S by row operations, then R = S.
+\end{box_purple}
+\noindent
+Learning Notes:
+\\...
+
+\noindent
+\textbf{Linear Transformations}
+
+\begin{box_purple}{Definition 2.13: Linear Transformations}
+A transformation $T : \mathbb{R}^n \xrightarrow{} \mathbb{R}^m$ is called a linear transformation if it satisfies the following two conditions for all vectors \textbf{x} and \textbf{y} in $\mathbb{R}^n$ and all scalars \textit{a}:
+$$\text{T1 } T(\textbf{x}+\textbf{y}) = T(\textbf{x})+T(\textbf{y})$$
+$$\text{T2 } T(a\textbf{x}) = aT(\textbf{x})$$
+\end{box_purple}
+\noindent
+Learning Notes:
+\\...
+
+\begin{box_purple}{Theorem 2.6.1: Linearity Theorem }
+If $T : \mathbb{R}^n \xrightarrow{} \mathbb{R}^m$ is a linear transformation, then for each $k$ = 1, 2, ...
+$$T(a_1\textbf{x}_1+a_2\textbf{x}_2+...+a_k\textbf{x}_k) =a_1T(\textbf{x}_1)+a_2T(\textbf{x}_2)+...+a_kT(\textbf{x}_k)$$
+for all scalars ai and all vectors \textbf{x}$_i$ in $\mathbb{R}^n$.
+\end{box_purple}
+\noindent
+Learning Notes:
+\\...
+
+\begin{box_purple}{Theorem 2.6.4: Rotations}
+The rotation $R_\theta : \mathbb{R}^2 \xrightarrow{} \mathbb{R}^2$ is the linear transformation with matrix
+$$\begin{bmatrix}
+    \cos\theta & -\sin\theta \\
+    \sin\theta & \cos\theta
+\end{bmatrix}$$
+\end{box_purple}
+\noindent
+Learning Notes:
+\\...
+
+\begin{box_purple}{Theorem 2.6.5: Reflections}
+Let $Q_m$ denote a reflection transformation with respect to the line $y = mx$. Then $Q_m : \mathbb{R}^2 \xrightarrow{} \mathbb{R}^2$ is a linear transformation with matrix 
+$$\frac{1}{1+m^2}\begin{bmatrix}
+    1-m^2 & 2m \\
+    2m & m^2-1
+\end{bmatrix}$$
+\end{box_purple}
+\noindent
+Learning Notes:
+\\...
+
+\begin{box_purple}{Theorem 2.6.6: Projection}
+Let $P_m$ be projection on the line $y = mx$. Then $P_m : \mathbb{R}^2 \xrightarrow{} \mathbb{R^2}$ is a linear transformation with matrix 
+$$\frac{1}{1+m^2}\begin{bmatrix}
+    1 & m \\
+    m & m^2
+\end{bmatrix}$$
+\end{box_purple}
+\noindent
+Learning Notes:
+\\...
+
+\section*{Summarising your understanding: }
+
+\begin{itemize}
+    \item Add notes to the definitions and theorems above that reflect your understanding of the definition/theorem, how it relates to the learning objectives, and things to keep in mind when applying – these notes can be somewhat informal but should be understandable to your OnTrack tutor. 
+\end{itemize}
+\noindent
+Write a mathematical summary for the module that includes the questions/tasks in the dot points below.  Note that the summary should include more than just the questions - we’d recommend having a subheading for each sub-module, and then include the guiding questions where appropriate.  You should provide reference to the relevant definitions, theorems and terms in the tables above to help demonstrate your understanding of how the concepts are linked and applied (as you did for Module 1 and 2).
+\begin{itemize}
+    \item Summarise the matrix inversion algorithm in words, referring to an example in your evidence or self-assessment.
+	\item If the rank of an $n \times n$ matrix is \underline{less} than $n$, what does this tell us about the inverse matrix? (consider what might happen when applying the inversion algorithm).
+	\item Provide reasoning as to whether or not a non-square matrix could have an inverse.
+    \item What are some strategies for identifying the transformation applied in N3.4.2?
+
+\end{itemize}
+
+
+\section*{Reflecting on the content:}
+\begin{itemize}
+    \item Reflect on what you found interesting/difficult in this module, how it relates to previous content covered in this and other units, and which parts helped you to meet each of the learning objectives. This should be written from your personal perspective and not just read as a general summary of the topic.
+\end{itemize}
+
+
+
+\end{document}
